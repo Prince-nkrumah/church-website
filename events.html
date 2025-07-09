@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Shalom Family Church</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Shalom Family</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Events Banner -->
+    <section class="events-banner">
+        <div class="container">
+            <h1>Upcoming Events</h1>
+            <p>Join us for worship, fellowship, and service</p>
+        </div>
+    </section>
+
+    <!-- Events List -->
+    <section class="events-list">
+        <div class="container">
+            <div class="events-container">
+                <div class="event-detail">
+                    <img src="assets/event1.jpg" alt="Sunday Service" loading="lazy">
+                    <div class="event-content">
+                        <h2>Sunday Worship Service</h2>
+                        <div class="event-meta">
+                            <p><i class="far fa-calendar-alt"></i> June 12, 2023 | 10:00 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Main Sanctuary</p>
+                        </div>
+                        <p>Join us for our weekly worship service featuring inspiring music led by our worship team and a powerful message from Pastor Mike. This week's sermon is titled "Walking in Faith" from Hebrews 11:1-6. Children's church and nursery available.</p>
+                        <button class="btn primary-btn book-ticket" data-event="Sunday Worship Service">Book a Ticket</button>
+                    </div>
+                </div>
+
+                <div class="event-detail">
+                    <img src="assets/event2.jpg" alt="Bible Study" loading="lazy">
+                    <div class="event-content">
+                        <h2>Bible Study Night</h2>
+                        <div class="event-meta">
+                            <p><i class="far fa-calendar-alt"></i> June 14, 2023 | 7:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Fellowship Hall</p>
+                        </div>
+                        <p>Deep dive into the Book of Romans with Pastor Mike. This 8-week study will explore Paul's letter to the Romans chapter by chapter. Bring your Bible, notebook, and questions. Light refreshments served. All ages welcome.</p>
+                        <button class="btn primary-btn book-ticket" data-event="Bible Study Night">Book a Ticket</button>
+                    </div>
+                </div>
+
+                <div class="event-detail">
+                    <img src="assets/event3.jpg" alt="Community Outreach" loading="lazy">
+                    <div class="event-content">
+                        <h2>Community Outreach</h2>
+                        <div class="event-meta">
+                            <p><i class="far fa-calendar-alt"></i> June 17, 2023 | 9:00 AM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> City Homeless Shelter</p>
+                        </div>
+                        <p>Help us serve meals at the local homeless shelter. We need volunteers for food preparation, serving, and clean-up. This is a great opportunity to put your faith into action and show God's love to those in need. Transportation provided from church at 8:30 AM.</p>
+                        <button class="btn primary-btn book-ticket" data-event="Community Outreach">Book a Ticket</button>
+                    </div>
+                </div>
+
+                <div class="event-detail">
+                    <img src="assets/event1.jpg" alt="Youth Group" loading="lazy">
+                    <div class="event-content">
+                        <h2>Youth Group Meeting</h2>
+                        <div class="event-meta">
+                            <p><i class="far fa-calendar-alt"></i> June 18, 2023 | 6:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Youth Center</p>
+                        </div>
+                        <p>Middle and high school students are invited for games, worship, and Bible study. This week's topic: "Living for Christ in a Digital World." Pizza dinner included. Friends welcome!</p>
+                        <button class="btn primary-btn book-ticket" data-event="Youth Group Meeting">Book a Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticket Booking Modal -->
+    <div class="modal" id="bookingModal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <h2>Book Ticket for <span id="eventTitle"></span></h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="attendees">Number of Attendees</label>
+                    <select id="attendees" name="attendees">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn primary-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">Shalom Family</a>
+                    <p>A community of faith, hope, and love.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Shalom Family Church. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
